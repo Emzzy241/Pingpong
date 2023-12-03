@@ -35,7 +35,7 @@ namespace PingPong.Tests
 
         // 3rd Test: set functionality... User enters a value, YES. We want to make it a private field and set the value
         [TestMethod]  
-        public void SetValue_ReturnsValue_Void()
+        public void SetValue_SetsValueOfPrivateField_Void()
         {
             // Arrange 
             int num = 5;
@@ -52,7 +52,7 @@ namespace PingPong.Tests
         // First path: This path returns "Ping" if number is Divisible By Three
         // bn=
         [TestMethod]  
-        public void GameMethodDivisibleByThree_ExecutesLogicForGame_List()
+        public void GameMethodDivisibleByThree_ExecutesLogicForGame_Object()
         {
             // Arrange 
             int num = 3;
@@ -70,7 +70,7 @@ namespace PingPong.Tests
         // Second path: This path returns "Pong" if number is Divisible By Five
         // bn=
         [TestMethod]  
-        public void GameMethodDivisibleByFive_ExecutesLogicForGame_List()
+        public void GameMethodDivisibleByFive_ExecutesLogicForGame_Object()
         {
             // Arrange 
             int num = 5;
@@ -87,7 +87,7 @@ namespace PingPong.Tests
         // 6th Test: Third path, This path returns "Ping-Pong" if number is Divisible By Both Five And Three
         // bn=
         [TestMethod]  
-        public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_List()
+        public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_Object()
         {
             // Arrange 
             int num = 15;
@@ -101,22 +101,23 @@ namespace PingPong.Tests
             Assert.AreEqual(changeThree, theReturn);
         }
 
-        // 6th Test: List, to return all numbers
-        [TestMethod]  
-        public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_List()
-        {
-            // Arrange 
-            int num = 15;
-            object changeThree = "Ping-Pong";
-            MyPingPong newPing = new MyPingPong(num);
-            List<object> expected = new List<object>() {};
+        // 7th Test: List, to return all numbers
+        // [TestMethod]  
+        // public void ForLoop_AddingAForLoopToBranch_Object()
+        // {
+        //     // Arrange 
+        //     int num = 15;
+        //     object changeThree = "Ping-Pong";
+        //     MyPingPong newPing = new MyPingPong(num);
+        //     // List<object> expected = new List<object>() {};
 
-            // Act
-            object theReturn = newPing.GetAll();
+        //     // Act
+        //     // object theReturn = newPing.GetAll();
+        //     object actualResullt = newPing.GameMethod();
 
-            // Assert
-            CollectionsAssert.AreEqual(changeThree, theReturn);
-        }
+        //     // Assert
+        //     Assert.AreEqual(changeThree, actualResullt);
+        // }
 
 
     }
