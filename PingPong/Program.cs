@@ -6,7 +6,7 @@ namespace PingPong.Models
     {
         static void Main()
         {
-            
+            // Console.WriteLine("We")
         }
     }
     

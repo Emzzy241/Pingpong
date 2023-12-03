@@ -18,9 +18,14 @@ namespace PingPong.Models
         {
             object ifDivisibleByThree = "Ping";
             object ifDivisibleByFive = "Pong";
-            // object ifDivisibleByBothFiveAndThree = "Ping-Pong";
+            object ifDivisibleByBothFiveAndThree = "Ping-Pong";
 
-            if(Val1 % 3 == 0)
+            if (Val1 % 5 == 0 && Val1 % 3 == 0)
+            {
+                return ifDivisibleByBothFiveAndThree;
+            }
+
+            else if(Val1 % 3 == 0)
             {
                 return ifDivisibleByThree;
             }
@@ -29,6 +34,7 @@ namespace PingPong.Models
             {
                 return ifDivisibleByFive;
             }
+
             else{
                 return Val1;
             }

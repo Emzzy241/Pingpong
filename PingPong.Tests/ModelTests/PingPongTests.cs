@@ -52,7 +52,7 @@ namespace PingPong.Tests
         // First path: This path returns "Ping" if number is Divisible By Three
         // bn=
         [TestMethod]  
-        public void GameMethodDivisibleByThree_ExecutesLogicForGame_Int()
+        public void GameMethodDivisibleByThree_ExecutesLogicForGame_List()
         {
             // Arrange 
             int num = 3;
@@ -63,14 +63,14 @@ namespace PingPong.Tests
             object theReturn = newPing.GameMethod();
 
             // Assert
-            Assert.AreEqual(theReturn, changeThree);
+            Assert.AreEqual(changeThree, theReturn);
         }
 
         // 5th Test: ... GameMethod: THe method that determines the Game logic
         // Second path: This path returns "Pong" if number is Divisible By Five
         // bn=
         [TestMethod]  
-        public void GameMethodDivisibleByFive_ExecutesLogicForGame_Int()
+        public void GameMethodDivisibleByFive_ExecutesLogicForGame_List()
         {
             // Arrange 
             int num = 5;
@@ -81,25 +81,42 @@ namespace PingPong.Tests
             object theReturn = newPing.GameMethod();
 
             // Assert
-            Assert.AreEqual(theReturn, changeThree);
+            Assert.AreEqual(changeThree, theReturn);
         }
 
         // 6th Test: Third path, This path returns "Ping-Pong" if number is Divisible By Both Five And Three
         // bn=
-        // [TestMethod]  
-        // public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_Int()
-        // {
-        //     // Arrange 
-        //     int num = 15;
-        //     object changeThree = "Ping-Pong";
-        //     MyPingPong newPing = new MyPingPong(num);
+        [TestMethod]  
+        public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_List()
+        {
+            // Arrange 
+            int num = 15;
+            object changeThree = "Ping-Pong";
+            MyPingPong newPing = new MyPingPong(num);
 
-        //     // Act
-        //     object theReturn = newPing.GameMethod();
+            // Act
+            object theReturn = newPing.GameMethod();
 
-        //     // Assert
-        //     Assert.AreEqual(theReturn, changeThree);
-        // }
+            // Assert
+            Assert.AreEqual(changeThree, theReturn);
+        }
+
+        // 6th Test: List, to return all numbers
+        [TestMethod]  
+        public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_List()
+        {
+            // Arrange 
+            int num = 15;
+            object changeThree = "Ping-Pong";
+            MyPingPong newPing = new MyPingPong(num);
+            List<object> expected = new List<object>() {};
+
+            // Act
+            object theReturn = newPing.GetAll();
+
+            // Assert
+            CollectionsAssert.AreEqual(changeThree, theReturn);
+        }
 
 
     }
