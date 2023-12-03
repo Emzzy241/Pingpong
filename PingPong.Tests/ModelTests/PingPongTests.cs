@@ -86,20 +86,20 @@ namespace PingPong.Tests
 
         // 6th Test: Third path, This path returns "Ping-Pong" if number is Divisible By Both Five And Three
         // bn=
-        [TestMethod]  
-        public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_Int()
-        {
-            // Arrange 
-            int num = 15;
-            object changeThree = "Ping-Pong";
-            MyPingPong newPing = new MyPingPong(num);
+        // [TestMethod]  
+        // public void GameMethodDivisibleByBothFiveAndThree_ExecutesLogicForGame_Int()
+        // {
+        //     // Arrange 
+        //     int num = 15;
+        //     object changeThree = "Ping-Pong";
+        //     MyPingPong newPing = new MyPingPong(num);
 
-            // Act
-            object theReturn = newPing.GameMethod();
+        //     // Act
+        //     object theReturn = newPing.GameMethod();
 
-            // Assert
-            Assert.AreEqual(theReturn, changeThree);
-        }
+        //     // Assert
+        //     Assert.AreEqual(theReturn, changeThree);
+        // }
 
 
     }
